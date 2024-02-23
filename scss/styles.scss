@@ -1,0 +1,99 @@
+@use 'globals/reset';
+@use 'globals/typography';
+@use 'globals/variables' as *;
+@use 'globals/mixins.scss' as *;
+
+/// HEADER SECTION ///
+header{
+    // min-height: 100vh;
+    // NAVBAR SECTION
+    .navbar-container{
+        @include flex-setup-0;
+        justify-content: space-between;
+        margin: 2rem 4rem;
+
+        .nav-logo{
+            a{
+                img{
+                    width: 75px;
+                }
+            }
+        }
+
+        .nav-links{
+            .links{
+                font-size: 1.15rem;
+                font-weight: 700;
+                color: #171717;
+                margin-right: 2rem;
+
+                &:hover{
+                    color: $orange-color;
+                    transition: color .25s;
+                }
+            }
+
+            .about{
+                position: relative;
+                padding-bottom: .35rem;
+                text-align: center;
+                transition: .3s linear;
+
+                &::after{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: .21rem;
+                    height: .21rem;
+                    background-color: #171717;
+                    border-radius: 50%;
+                    transition: width .3s, border-radius .3s; 
+                }
+
+                &:hover::after {
+                    width: calc(100% - .36rem);
+                    border-radius: 0;
+                    background-color: $orange-color;
+                }
+            }
+
+            .links-1{
+                margin-right: 0;
+            }
+        }
+
+        .nav-btn{
+            @include flex-setup-0;
+
+            .icon{
+                @include flex-setup-0;
+                justify-content: center;
+                background: $orange-color;
+                border-radius: 50%;
+                padding: .70rem;
+                margin-right: .5rem;
+
+                img{
+                    width: 1.5rem;
+                }
+            }
+
+            .hotline{
+                .dispo{
+                    font-size: .7rem;
+                    font-weight: 700;
+                    color: #4c4b4b;
+                    margin-bottom: .15rem;
+                }
+
+                .number{
+                    font-size: .950rem;
+                    font-weight: 900;
+                    color: #171717;
+                }
+            }
+        }
+    }
+}
