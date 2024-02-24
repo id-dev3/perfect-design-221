@@ -35,7 +35,7 @@ header{
 
             .about{
                 position: relative;
-                padding-bottom: .35rem;
+                padding-bottom: .55rem;
                 text-align: center;
                 transition: .3s linear;
 
@@ -45,8 +45,8 @@ header{
                     bottom: 0;
                     left: 50%;
                     transform: translateX(-50%);
-                    width: .21rem;
-                    height: .21rem;
+                    width: .35rem;
+                    height: .35rem;
                     background-color: #171717;
                     border-radius: 50%;
                     transition: width .3s, border-radius .3s; 
@@ -54,6 +54,7 @@ header{
 
                 &:hover::after {
                     width: calc(100% - .36rem);
+                    height: .20rem;
                     border-radius: 0;
                     background-color: $orange-color;
                 }
@@ -93,6 +94,125 @@ header{
                     font-weight: 900;
                     color: #171717;
                 }
+            }
+        }
+    }
+
+    .hero-section{
+        @include flex-setup-0;
+        justify-content: space-between;
+        margin: 3rem 0 0 4rem;
+
+        .hero-text{
+            flex: 1 0 50%;
+
+            .wrapper{
+                width: auto;
+                margin-bottom: 1.5rem;
+
+                .effect-wrapper{
+                    color: #171717;
+                    font-size: 4.25rem;
+                    font-weight: 900;
+                    line-height: 5rem;
+                    letter-spacing: -0.06944rem;
+
+                    #typed{
+                        font-weight: bold;
+                        color: $orange-color;
+                        // border-bottom: 4px solid $orange-color;
+                    }
+                      
+                    .cursor{
+                        display: inline-block;
+                        background-color: $orange-color;
+                        animation: blinker 800ms infinite;
+                    }
+                    
+                    .cursor.typing-true{
+                        animation: none;
+                    }
+                    
+                    @keyframes blinker{
+                        0% { background-color: $orange-color; }
+                        50% { background-color: transparent; }
+                        100% { background-color: $orange-color; }
+                    }
+                }
+            }
+              
+            p{
+                color: #4c4b4b;
+                font-size: 1.15rem;
+                font-weight: 500;
+                line-height: 1.75rem;
+                width: 80%;
+                text-wrap: balance;
+                margin-bottom: 4rem;
+            }
+              
+            .cta{
+                position: relative;
+                margin: auto;
+                padding: 12px 18px;
+                transition: all 0.2s ease;
+                border: none;
+                background: none;
+                cursor: pointer;
+              
+                &:before{
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  display: block;
+                  border-radius: 50px;
+                  background: #fdccb3;
+                  width: 45px;
+                  height: 45px;
+                  transition: all 0.3s ease;
+                }
+              
+                span{
+                  position: relative;
+                  font-size: 1.15rem;
+                  font-weight: 600;
+                  letter-spacing: 0.05em;
+                  color: $orange-color;
+                }
+              
+                .fa-arrow-right{
+                  position: relative;
+                  font-size: 1.4rem;
+                  color: $orange-color;
+                  top: 3px;
+                  margin-left: 14px;
+                  transform: translateX(-5px);
+                  transition: all 0.3s ease;
+                }
+              
+                &:hover:before{
+                  width: 100%;
+                  background: #fdccb3;
+                }
+              
+                &:hover .fa-arrow-right{
+                  transform: translateX(0);
+                }
+              
+                &:active{
+                  transform: scale(0.95);
+                }
+            }
+        }
+
+        .hero-image{
+            flex: 1 0 50%;
+
+            img{
+                max-width: 100%;
+                height: auto;
+                object-fit: cover;
             }
         }
     }
