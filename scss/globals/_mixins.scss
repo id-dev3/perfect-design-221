@@ -40,3 +40,16 @@
         left: calc(50% - 20px);
     }
 }
+
+@mixin header-setup{
+    color: $light-black-color;
+    font: 500 1.15rem / 1.5 $font-family;
+    margin-bottom: .900rem;
+    text-wrap: pretty;
+    @include flex-setup-1;
+    gap: 0 5px;
+
+    img{
+        max-width: 100%;
+    }
+}

@@ -9,7 +9,7 @@ header{
     .navbar-container{
         @include flex-setup-0;
         justify-content: space-between;
-        margin: 2rem 4rem;
+        padding: 2rem 4rem;
 
         .nav-logo{
             a{
@@ -258,16 +258,7 @@ main{
             }
 
             p{
-                color: $light-black-color;
-                font: 500 1.15rem / 1.5 $font-family;
-                margin-bottom: .900rem;
-                text-wrap: pretty;
-                @include flex-setup-1;
-                gap: 0 5px;
-
-                img{
-                    max-width: 100%;
-                }
+                @include header-setup;
             }
         }
 
@@ -371,6 +362,22 @@ main{
                 }
             }
         }
-        
+    }
+
+    // FIRST SECTION
+    .second-section{
+        padding: 0 4rem;
+
+        .header-1{
+            text-align: center;
+
+            h2{
+                @include h2-setup;
+            }
+
+            p{
+                @include header-setup;
+            }
+        }
     }
 }

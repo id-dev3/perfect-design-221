@@ -5,7 +5,12 @@ html{
 body{
     font-family: 'Roboto', Helvetica, 'Segoe UI', Arial, sans-serif;
     overflow-x: hidden;
-    background-color: whitesmoke;
+    // background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+    // background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+    background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
+    background-blend-mode: screen;
+    // background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    
 }
 
 *,
