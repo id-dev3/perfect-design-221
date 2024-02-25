@@ -1,4 +1,42 @@
+@use 'variables' as *;
+
 @mixin flex-setup-0{
     display: flex;
     align-items: center;
+}
+
+@mixin flex-setup-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin h2-setup{
+    position: relative;
+    font-size: 2.5rem;
+    color: $black-color;
+    padding-bottom: .8rem;
+    margin-bottom: 1.5rem;
+
+    &::before{
+        content: "";
+        position: absolute;
+        display: block;
+        width: 120px;
+        height: 1px;
+        background: #d3d2d2;
+        bottom: 1px;
+        left: calc(50% - 60px);
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        display: block;
+        width: 40px;
+        height: 3px;
+        background: $orange-color;
+        bottom: 0;
+        left: calc(50% - 20px);
+    }
 }

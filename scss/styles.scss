@@ -21,9 +21,8 @@ header{
 
         .nav-links{
             .links{
-                font-size: 1.15rem;
-                font-weight: 700;
-                color: #171717;
+                font: 600 1.15rem / 1.5 $font-family;
+                color: $black-color;
                 margin-right: 2rem;
 
                 &:hover{
@@ -46,12 +45,12 @@ header{
                     transform: translateX(-50%);
                     width: .35rem;
                     height: .35rem;
-                    background-color: #171717;
+                    background-color: $black-color;
                     border-radius: 50%;
                     transition: width .3s, border-radius .3s; 
                 }
 
-                &:hover::after {
+                &:hover::after{
                     width: calc(100% - .36rem);
                     height: .20rem;
                     border-radius: 0;
@@ -68,8 +67,7 @@ header{
             @include flex-setup-0;
 
             .icon{
-                @include flex-setup-0;
-                justify-content: center;
+                @include flex-setup-1;
                 background: $orange-color;
                 border-radius: 50%;
                 padding: .70rem;
@@ -82,16 +80,14 @@ header{
 
             .hotline{
                 .dispo{
-                    font-size: .7rem;
-                    font-weight: 700;
-                    color: #4c4b4b;
+                    font: 700 .7rem / 1.5 "Roboto", sans-serif;
+                    color: $light-black-color;
                     margin-bottom: .15rem;
                 }
 
                 .number{
-                    font-size: .950rem;
-                    font-weight: 900;
-                    color: #171717;
+                    font: 900 .950rem / 1.5 "Roboto", sans-serif;
+                    color: $black-color;
                 }
             }
         }
@@ -110,16 +106,12 @@ header{
                 margin-bottom: 1.5rem;
 
                 .effect-wrapper{
-                    color: #171717;
-                    font-size: 4.25rem;
-                    font-weight: 900;
-                    line-height: 5rem;
+                    color: $black-color;
+                    font: 900 4.25rem / 5rem $font-family;
                     letter-spacing: -0.06944rem;
 
                     #typed{
-                        font-weight: bold;
                         color: $orange-color;
-                        // border-bottom: 4px solid $orange-color;
                     }
                       
                     .cursor{
@@ -141,10 +133,8 @@ header{
             }
               
             p{
-                color: #4c4b4b;
-                font-size: 1.15rem;
-                font-weight: 500;
-                line-height: 1.75rem;
+                color: $light-black-color;
+                font: 500 1.15rem / 1.75rem $font-family;
                 width: 80%;
                 text-wrap: balance;
                 margin-bottom: 4rem;
@@ -174,9 +164,8 @@ header{
               
                 span{
                   position: relative;
-                  font-size: 1.15rem;
-                  font-weight: 600;
-                  letter-spacing: 0.05em;
+                  font: 600 1.15rem / 1.5 $font-family;
+                  letter-spacing: 0.05rem;
                   color: $orange-color;
                 }
               
@@ -221,31 +210,167 @@ header{
 main{
     // BRAND SECTION
     .brand-logo-container{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 20px;
-        margin: 0 4rem 4rem 4rem;
+        margin: 5rem 4rem;
 
-        .brand-logo{
-            width: 130px;
-            height: 130px;
-            @include flex-setup-0;
-            justify-content: center;
-            filter: grayscale(100%);
-            transition: filter 0.3s ease;
-        
-            img{
-                width: 100%;
-                max-height: 100%;
-                aspect-ratio: 3/3;
-                object-fit: contain;
-            }
-        
-            &:hover{
-                cursor: pointer;
-                filter: grayscale(0%);
+        p{
+            color: $light-black-color;
+            font: 600 1.15rem / 1.5 $font-family;
+            text-align: center;
+        }
+
+        .brand-logos{
+            @include flex-setup-1;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            .brand-logo{
+                width: 130px;
+                height: 130px;
+                @include flex-setup-1;
+                filter: grayscale(100%);
+                transition: filter 0.3s ease;
+            
+                img{
+                    width: 100%;
+                    max-height: 100%;
+                    aspect-ratio: 3/3;
+                    object-fit: contain;
+                }
+            
+                &:hover{
+                    cursor: pointer;
+                    filter: grayscale(0%);
+                }
             }
         }
+    }
+
+    // FIRST SECTION
+    .first-section{
+        margin: 0 4rem;
+        padding-bottom: 3rem;
+
+        .header-0{
+            text-align: center;
+
+            h2{
+                @include h2-setup;
+            }
+
+            p{
+                color: $light-black-color;
+                font: 500 1.15rem / 1.5 $font-family;
+                margin-bottom: .900rem;
+                text-wrap: pretty;
+                @include flex-setup-1;
+                gap: 0 5px;
+
+                img{
+                    max-width: 100%;
+                }
+            }
+        }
+
+        .container{
+            // width: 1100px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 3.5rem auto 5rem auto;
+
+            .box{
+                max-width: 320px;
+                position: relative;
+                background: #FFF;
+                padding: 100px 30px 40px;
+                box-shadow: 0 15px 45px rgba(0, 0, 0, .1);
+                border-radius: .5rem;
+                display: flex;
+                flex-direction: column;
+        
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: $orange-color;
+                    transform: scaleY(0);
+                    transform-origin: top;
+                    transition: transform 0.5s;
+                    border-radius: .5rem;
+                }
+        
+                &:hover::before{
+                    transform: scaleY(1);
+                    transform-origin: bottom;
+                    transition: transform 0.5s;
+                }
+        
+                span{
+                    position: absolute;
+                    left: 40px;
+                    top: 60px;
+                    font: 800 4rem / 1.25 $font-family;
+                    z-index: 1;
+                    opacity: 0.1;
+                    transition: 0.5s;
+                }
+        
+                &:hover span{
+                    opacity: 1;
+                    color: #FFF;
+                    transform: translateY(-40px);
+                }
+        
+                h3{
+                    color: $black-color;
+                    font: 900 1.4rem / 1.25 $font-family;
+                    position: relative;
+                    z-index: 2;
+                    transition: 0.5s;
+                    margin-bottom: .5rem;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    // margin-bottom: 10px;
+                    // @include flex-setup-0;
+
+                    .fa-solid, .fa-brands{
+                        font-size: 1.6rem;
+                        color: #E78050;
+                        margin-right: .3rem;
+                    }
+                }
+        
+                p{
+                    position: relative;
+                    z-index: 2;
+                    color: $light-black-color;
+                    font: 500 1rem / 1.55rem $font-family;
+                    transition: 0.5s;
+                }
+        
+                &:hover h3,
+                &:hover p,
+                &:hover .fa-solid, 
+                &:hover .fa-brands{
+                    color: #FFF;
+                }
+            }
+        
+            @media (max-width: 1000px){
+                flex-direction: column;
+                align-items: center;
+                padding: 60px 30px;
+        
+                .box{
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        
     }
 }
