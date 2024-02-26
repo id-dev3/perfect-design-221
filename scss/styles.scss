@@ -247,8 +247,8 @@ main{
 
     // FIRST SECTION
     .first-section{
-        margin: 0 4rem;
-        padding-bottom: 3rem;
+        margin: 0 4rem 6rem 4rem;
+        // padding-bottom: 3rem;
 
         .header-0{
             text-align: center;
@@ -268,7 +268,7 @@ main{
             justify-content: center;
             flex-wrap: wrap;
             gap: 1.5rem;
-            margin: 3.5rem auto 5rem auto;
+            margin: 3.5rem auto 0rem auto;
 
             .box{
                 max-width: 320px;
@@ -277,8 +277,8 @@ main{
                 padding: 100px 30px 40px;
                 box-shadow: 0 15px 45px rgba(0, 0, 0, .1);
                 border-radius: .5rem;
-                display: flex;
-                flex-direction: column;
+                // display: flex;
+                // flex-direction: column;
         
                 &::before{
                     content: '';
@@ -364,9 +364,10 @@ main{
         }
     }
 
-    // FIRST SECTION
+    // SECOND SECTION
     .second-section{
         padding: 0 4rem;
+        margin-bottom: 5rem;
 
         .header-1{
             text-align: center;
@@ -379,5 +380,92 @@ main{
                 @include header-setup;
             }
         }
+
+        .container{
+            // height: 100vh;
+            width: 100%;
+            @include flex-setup-1;
+            margin-top: 2rem;
+
+            .row{
+                display: flex;
+                flex-wrap: wrap;
+
+                .column{
+                    width: 100%;
+                    padding: 0 1rem 1.8rem 1rem;
+                    text-align: center;
+
+                    .card{
+                        width: 100%;
+                        height: 100%;
+                        padding: 2em 1.5em;
+                        background: linear-gradient(#fff 50%, $orange-color 50%);
+                        background-size: 100% 200%;
+                        background-position: 0 2.5%;
+                        border-radius: 5px;
+                        box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+                        cursor: pointer;
+                        transition: 0.5s;
+                        
+                        &:hover{
+                            background-position: 0 100%;
+
+                            .icon-wrapper{
+                                background-color: #fff;
+                                color: $orange-color;
+                            }
+
+                            h3, p{
+                                color: #fff;
+                            }
+                        }
+
+                        .icon-wrapper{
+                            background-color: $orange-color;
+                            position: relative;
+                            margin: 0 auto 1.5rem auto;
+                            font-size: 30px;
+                            height: 2.5em;
+                            width: 2.5em;
+                            color: #ffffff;
+                            border-radius: 50%;
+                            @include flex-setup-1;
+                            transition: 0.5s;
+                        }
+
+                        h3{
+                            @include h3-setup;
+                            margin-bottom: 1rem;
+                        }
+                          
+                        p{
+                            color: $light-black-color;
+                            font: 500 1rem / 1.55rem $font-family;
+                            letter-spacing: 0.03rem;
+                            text-wrap: pretty;
+                        }
+                    }
+                  
+                    @media screen and (min-width: 768px) {
+                      flex: 0 50%;
+                      max-width: 50%;
+                    }
+                  
+                    @media screen and (min-width: 992px) {
+                      flex: 0 0 33.33%;
+                      max-width: 33.33%;
+                    }
+                }
+            }
+          
+            @media screen and (min-width: 768px) {
+              padding: 0 2em;
+            }
+          
+            @media screen and (min-width: 992px) {
+              padding: 1em 3em;
+            }
+        }  
     }
 }

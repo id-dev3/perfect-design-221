@@ -41,6 +41,15 @@
     }
 }
 
+@mixin h3-setup{
+    color: $black-color;
+    font: 900 1.4rem / 1.25 $font-family;
+    position: relative;
+    z-index: 2;
+    transition: 0.5s;
+    margin-bottom: .5rem;
+}
+
 @mixin header-setup{
     color: $light-black-color;
     font: 500 1.15rem / 1.5 $font-family;
