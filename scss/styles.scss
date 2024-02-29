@@ -468,4 +468,19 @@ main{
             }
         }  
     }
+
+    .third-section{
+        .header-2{
+            text-align: center;
+
+            h2{
+                @include h2-setup;
+            }
+
+            p{
+                @include header-setup;
+            }
+        }
+
+    }
 }
