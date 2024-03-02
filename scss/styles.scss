@@ -14,7 +14,7 @@ header{
         .nav-logo{
             a{
                 img{
-                    width: 75px;
+                    width: 4.688rem;
                 }
             }
         }
@@ -143,7 +143,7 @@ header{
             .cta{
                 position: relative;
                 margin: auto;
-                padding: 12px 18px;
+                padding: .75rem 1.125rem;
                 transition: all 0.2s ease;
                 border: none;
                 background: none;
@@ -155,10 +155,10 @@ header{
                   top: 0;
                   left: 0;
                   display: block;
-                  border-radius: 50px;
+                  border-radius: 3.125rem;
                   background: #fdccb3;
-                  width: 45px;
-                  height: 45px;
+                  width: 2.813rem;
+                  height: 2.813rem;
                   transition: all 0.3s ease;
                 }
               
@@ -173,9 +173,9 @@ header{
                   position: relative;
                   font-size: 1.4rem;
                   color: $orange-color;
-                  top: 3px;
-                  margin-left: 14px;
-                  transform: translateX(-5px);
+                  top: .188rem;
+                  margin-left: .875rem;
+                  transform: translateX(-.313rem);
                   transition: all 0.3s ease;
                 }
               
@@ -224,8 +224,8 @@ main{
             gap: 20px;
 
             .brand-logo{
-                width: 130px;
-                height: 130px;
+                width: 8.125rem;
+                height: 8.125rem;
                 @include flex-setup-1;
                 filter: grayscale(100%);
                 transition: filter 0.3s ease;
@@ -270,11 +270,11 @@ main{
             margin: 3.5rem auto 0rem auto;
 
             .box{
-                max-width: 320px;
+                max-width: 20rem;
                 position: relative;
                 background: #FFF;
-                padding: 100px 30px 40px;
-                box-shadow: 0 15px 45px rgba(0, 0, 0, .1);
+                padding: 6.25rem 1.875rem 2.5rem;
+                box-shadow: 0 .938rem 2.813rem rgba(0, 0, 0, .1);
                 border-radius: .5rem;
                 // display: flex;
                 // flex-direction: column;
@@ -301,8 +301,8 @@ main{
         
                 span{
                     position: absolute;
-                    left: 40px;
-                    top: 60px;
+                    left: 2.5rem;
+                    top: 3.75rem;
                     font: 800 4rem / 1.25 $font-family;
                     z-index: 1;
                     opacity: 0.1;
@@ -354,10 +354,10 @@ main{
             @media (max-width: 1000px){
                 flex-direction: column;
                 align-items: center;
-                padding: 60px 30px;
+                padding: 3.75rem 1.875rem;
         
                 .box{
-                    margin-bottom: 20px;
+                    margin-bottom: 1.25rem;
                 }
             }
         }
@@ -402,7 +402,7 @@ main{
                         background: linear-gradient(#fff 50%, $orange-color 50%);
                         background-size: 100% 200%;
                         background-position: 0 2.5%;
-                        border-radius: 5px;
+                        border-radius: .513rem;
                         box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
                         cursor: pointer;
                         transition: 0.5s;
@@ -424,9 +424,9 @@ main{
                             background-color: $orange-color;
                             position: relative;
                             margin: 0 auto 1.5rem auto;
-                            font-size: 30px;
-                            height: 2.5em;
-                            width: 2.5em;
+                            font-size: 1.875rem;
+                            height: 4.25rem;
+                            width: 4.25rem;
                             color: #ffffff;
                             border-radius: 50%;
                             @include flex-setup-1;
@@ -493,12 +493,12 @@ main{
                 position: relative;
 
                 #prev-slide {
-                    left: -25px;
+                    left: -1.563rem;
                     display: none;
                 }
 
                 #next-slide {
-                    right: -25px;
+                    right: -1.563rem;
                 }
 
                 .slide-button{
@@ -506,8 +506,8 @@ main{
                     top: 50%;
                     outline: none;
                     border: none;
-                    height: 50px;
-                    width: 50px;
+                    height: 3.125rem;
+                    width: 3.125rem;
                     z-index: 5;
                     color: #fff;
                     display: flex;
@@ -529,7 +529,7 @@ main{
                     // display: grid;
                     // grid-template-columns: repeat(10, 1fr);
                     gap: 0 18px;
-                    margin-bottom: 30px;
+                    margin-bottom: 1.875rem;
                     overflow-x: auto;
                     scrollbar-width: none;
 
@@ -538,32 +538,32 @@ main{
                     }
 
                     .image-item{
-                        width: 150px;
-                        height: 150px;
+                        width: 9.375rem;
+                        height: 9.375rem;
                         object-fit: cover;
                     }
                 }
             }
 
             .slider-scrollbar{
-                height: 24px;
+                height: 1.5rem;
                 width: 100%;
                 display: flex;
                 align-items: center;
 
                 &:hover{
                     .scrollbar-track {
-                        height: 4px;
+                        height: .25rem;
                     }
                 }
 
                 .scrollbar-track{
                     background: #ccc;
                     width: 100%;
-                    height: 2px;
+                    height: .125rem;
                     display: flex;
                     align-items: center;
-                    border-radius: 4px;
+                    border-radius: .25rem;
                     position: relative;
 
                     .scrollbar-thumb{
@@ -578,8 +578,8 @@ main{
 
                         &:active{
                             cursor: grabbing;
-                            height: 8px;
-                            top: -2px;
+                            height: .5rem;
+                            top: -.125rem;
                         }
 
                         &::after{
@@ -587,8 +587,8 @@ main{
                             position: absolute;
                             left: 0;
                             right: 0;
-                            top: -10px;
-                            bottom: -10px;
+                            top: -.625rem;
+                            bottom: -.625rem;
                         }
                     }
                 }
@@ -601,12 +601,12 @@ main{
             }
             .slider-wrapper .image-list{
                 gap: 10px;
-                margin-bottom: 15px;
+                margin-bottom: .938rem;
                 scroll-snap-type: x mandatory;
             }
             .slider-wrapper .image-list .image-item{
-                width: 280px;
-                height: 380px;
+                width: 17.5rem;
+                height: 23.75rem;
             }
             .slider-scrollbar .scrollbar-thumb{
                 width: 20%;
@@ -631,21 +631,21 @@ main{
             display: flex;
             align-items: center;
             width: 75vw;
-            max-width: 650px;
-            padding: 50px 30px 50px 20px;
+            max-width: 40.625rem;
+            padding: 3.125rem 1.875rem 3.125rem 1.25rem;
             background: #fff;
             box-shadow:  20px 20px 60px #bebebe,
                         -20px -20px 60px #ffffff;
-            border-radius: 24px;
+            border-radius: 1.5rem;
             margin: 2.5rem auto 0 auto;
 
             img{
-                max-width: 280px;
+                max-width: 17.5rem;
                 width: 35vw;
-                height: 300px;
+                height: 18.75rem;
                 object-fit: cover;
-                margin-left: -60px;
-                margin-right: 30px;
+                margin-left: -3.75rem;
+                margin-right: 1.875rem;
                 border-radius: inherit;
                 box-shadow: 0 60px 40px rgb(0 0 0 / 8%);
             }
@@ -653,16 +653,16 @@ main{
             div{
                 h2{
                     color: $black-color;
-                    font-size: 28px;
+                    font-size: 1.75rem;
                     font-weight: 600;
                     margin-top: 0;
-                    margin-right: 30px;
-                    margin-bottom: 5px;
+                    margin-right: 1.875rem;
+                    margin-bottom: .313rem;
                 }
 
                 h3{
                     color: $light-black-color;
-                    font-size: 16px;
+                    font-size: 1rem;
                     font-weight: 500;
                     margin-bottom: 1rem;
                     // margin: 0;
@@ -670,15 +670,15 @@ main{
                 }
 
                 p{
-                    font-size: 14px;
+                    font-size: .875rem;
                     font-weight: 400;
                     line-height: 1.15rem;
-                    margin-bottom: 15px;
+                    margin-bottom: .938rem;
                     opacity: 0.5;
                 }
 
                 div{
-                    @include flex-setup-1;
+                    @include flex-setup-0;
 
                     a{
                         .fa-brands{
@@ -702,29 +702,27 @@ main{
           
         @media (width <= 600px){
             .card{
-                margin: 0 40px;
-                padding-left: 50px;
-                padding-right: 50px;
-                padding-bottom: 60px;
+                margin: 0 2.5rem;
+                padding: 0 3.125rem 3.75rem 3.125rem;
                 width: 100%;
                 text-align: center;
                 flex-direction: column;
 
                 img{
-                    margin: -100px 0 30px 0;
+                    margin: -6.25rem 0 1.875rem 0;
                     width: 100%;
-                    max-width: 1000px;
-                    height: 250px;
+                    max-width: 62.5rem;
+                    height: 15.625rem;
                 }
 
                 div{
                     h2{
                         margin-right: 0;
-                        font-size: 26px;
+                        font-size: 1.625rem;
                     }
 
                     p{
-                        max-width: 360px;
+                        max-width: 22.5rem;
                     }
                 }
             }
@@ -736,7 +734,7 @@ main{
                     height: 45vw;
                     width: 45vw;
                     border-radius: 50%;
-                    margin: -140px 0 30px 0;
+                    margin: -8.75rem 0 1.875rem 0;
                 }
             }
         }
