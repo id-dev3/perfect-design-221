@@ -743,6 +743,7 @@ main{
     // FIFTH SECTION
     .fifth-section{
         margin: 0 5rem;
+        padding: 0 4rem;
 
         .header-4{
             text-align: center;
@@ -754,6 +755,12 @@ main{
             p{
                 @include header-setup;
             }
+        }
+
+        .container{
+            width: 100%;
+            @include flex-setup-1;
+            margin-top: 2rem;
         }
     }
 }
