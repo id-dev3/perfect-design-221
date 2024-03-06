@@ -43,22 +43,7 @@ window.onload = function() {
 /// End Typing Effect ///
 
 
-// window.onload = function() {
-//     var slider = document.querySelector('.card-slider');
-//     var cards = slider.querySelectorAll('.card');
-//     cards.forEach(function(card) {
-//         var clone = card.cloneNode(true);
-//         slider.appendChild(clone);
-//     });
-// };
-
-// window.onload = function() {
-//     var wrapper = document.querySelector('.card-slider-wrapper');
-//     var slider = document.querySelector('.card-slider');
-//     var clone = slider.cloneNode(true);
-//     wrapper.appendChild(clone);
-// };
-
+/// Start Slider Effect ///
 
 const initSlider = () => {
     const imageList = document.querySelector(".slider-wrapper .image-list");
@@ -128,3 +113,31 @@ const initSlider = () => {
 
 window.addEventListener("resize", initSlider);
 window.addEventListener("load", initSlider);
+
+/// End Slider Effect ///
+
+
+
+/// Start Form ///
+
+const inputs = document.querySelectorAll(".input");
+
+function focusFunc() {
+  let parent = this.parentNode;
+  parent.classList.add("focus");
+}
+
+function blurFunc() {
+  let parent = this.parentNode;
+  if (this.value == "") {
+    parent.classList.remove("focus");
+  }
+}
+
+inputs.forEach((input) => {
+  input.addEventListener("focus", focusFunc);
+  input.addEventListener("blur", blurFunc);
+});
+
+
+/// End Form ///

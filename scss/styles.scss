@@ -844,6 +844,257 @@ main{
             }
         }
     }
+
+        .container{
+            position: relative;
+            width: 100%;
+            padding: 2rem;
+            overflow: hidden;
+            @include flex-setup-1;
+    
+            .form{
+                width: 100%;
+                max-width: 51.25rem;
+                background-color: $color-white;
+                border-radius: .625rem;
+                box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+                overflow: hidden;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+    
+                .contact-form{
+                    background-color: $orange-color;
+                    position: relative;
+    
+                    .circle{
+                        border-radius: 50%;
+                        background: linear-gradient(135deg, transparent 20%, #fdccb3);
+                        position: absolute;
+    
+                        &.one{
+                            width: 8.125rem;
+                            height: 8.125rem;
+                            top: 130px;
+                            right: -40px;
+                        }
+    
+                        &.two{
+                            width: 5rem;
+                            height: 5rem;
+                            top: 10px;
+                            right: 30px;
+                        }
+                    }
+    
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        width: 1.625rem;
+                        height: 1.625rem;
+                        background-color: $orange-color;
+                        transform: rotate(45deg);
+                        top: 50px;
+                        left: -13px;
+                    }
+    
+                    form{
+                        padding: 2.3rem 2.2rem;
+                        z-index: 10;
+                        overflow: hidden;
+                        position: relative;
+    
+                        .title{
+                            color: $color-white;
+                            font-weight: 500;
+                            font-size: 1.5rem;
+                            line-height: 1;
+                            margin-bottom: 0.7rem;
+                        }
+    
+                        .input-container{
+                            position: relative;
+                            margin: 1rem 0;
+    
+                            .input{
+                                width: 100%;
+                                outline: none;
+                                border: 2px solid #fafafa;
+                                background: none;
+                                padding: 0.6rem 1.2rem;
+                                color: $color-white;
+                                font-weight: 500;
+                                font-size: 0.95rem;
+                                letter-spacing: 0.5px;
+                                border-radius: .313rem;
+                                transition: 0.3s;
+    
+                                &.textarea {
+                                    padding: 0.8rem 1.2rem;
+                                    min-height: 9.375rem;
+                                    border-radius: .313rem;
+                                    resize: none;
+                                    overflow-y: auto;
+                                }
+                            }
+                        }
+    
+                        .btn{
+                            padding: 0.6rem 1.3rem;
+                            background-color: $color-white;
+                            border: 2px solid #fafafa;
+                            font-size: 1rem;
+                            font-weight: 600;
+                            color: $orange-color;
+                            line-height: 1;
+                            border-radius: .313rem;
+                            outline: none;
+                            cursor: pointer;
+                            transition: 0.3s;
+                            margin: 0;
+                            width: 100%;
+    
+                            &:hover{
+                                background-color: transparent;
+                                color: $color-white;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .contact-info{
+                padding: 2.3rem 2.2rem;
+                position: relative;
+    
+                .title{
+                    color: $orange-color;
+                    font-size: 1.5rem;
+                }
+    
+                .text{
+                    color: $black-color;
+                    margin: 1.5rem 0 2rem 0;
+                }
+    
+                .information{
+                    @include flex-setup-0;
+                    color: $light-black-color;
+                    margin: 0.7rem 0;
+                    align-items: center;
+                    font-size: 0.95rem;
+    
+                    .fa-solid{
+                        color: $orange-color;
+                        font-size: 1.15rem;
+                        width: 1.85rem;
+                        @include flex-setup-1;
+                    }
+                }
+    
+                .social-media{
+                    padding: 2rem 0 0 0;
+    
+                    p{
+                        color: $black-color;
+                        font-size: 1.2rem;
+                        font-weight: 500;
+                    }
+    
+                    .social-icons{
+                        display: flex;
+                        margin-top: 0.5rem;
+    
+                        a{
+                            width: 2.188rem;
+                            height: 2.188rem;
+                            border-radius: 5px;
+                            background: linear-gradient(45deg, $orange-color, #fdccb3);
+                            color: $color-white;
+                            text-align: center;
+                            line-height: 2.188rem;
+                            margin-right: 0.5rem;
+                            transition: 0.3s;
+    
+                            &:hover{
+                                transform: scale(1.05);
+                            }
+                        }
+                    }
+                }
+            }
+    
+            @media (max-width: 850px){
+                .form{
+                    grid-template-columns: 1fr;
+                }
+    
+                .contact-info:before{
+                    bottom: initial;
+                    top: -75px;
+                    right: 65px;
+                    transform: scale(0.95);
+                }
+    
+                .contact-form:before{
+                    top: -13px;
+                    left: initial;
+                    right: 70px;
+                }
+    
+                .text{
+                    margin: 1rem 0 1.5rem 0;
+                }
+    
+                .social-media{
+                    padding: 1.5rem 0 0 0;
+                }
+            }
+    
+            @media (max-width: 480px){
+                .container{
+                    padding: 1.5rem;
+                }
+    
+                .contact-info:before{
+                    display: none;
+                }
+    
+                form,
+                .contact-info{
+                    padding: 1.7rem 1.6rem;
+                }
+    
+                .text,
+                .information,
+                .social-media p{
+                    font-size: 0.8rem;
+                }
+    
+                .title{
+                    font-size: 1.15rem;
+                }
+    
+                .social-icons a{
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                }
+    
+                .icon{
+                    width: 23px;
+                }
+    
+                .input{
+                    padding: 0.45rem 1.2rem;
+                }
+    
+                .btn{
+                    padding: 0.45rem 1.2rem;
+                }
+            }
+        }
+      
 }
 
 footer{
