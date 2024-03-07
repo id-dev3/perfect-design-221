@@ -99,7 +99,7 @@ header{
 
     @include mobile-view{
         .navbar-container{
-            padding: 1.5rem 1rem;
+            padding: 1.5rem;
 
             .nav-logo{
                 a{
@@ -224,21 +224,21 @@ header{
                         color: $orange-color;
                     }
                       
-                    .cursor{
-                        display: inline-block;
-                        background-color: $orange-color;
-                        animation: blinker 800ms infinite;
-                    }
+                    // .cursor{
+                    //     display: inline-block;
+                    //     background-color: $orange-color;
+                    //     animation: blinker 800ms infinite;
+                    // }
                     
-                    .cursor.typing-true{
-                        animation: none;
-                    }
+                    // .cursor.typing-true{
+                    //     animation: none;
+                    // }
                     
-                    @keyframes blinker{
-                        0% { background-color: $orange-color; }
-                        50% { background-color: transparent; }
-                        100% { background-color: $orange-color; }
-                    }
+                    // @keyframes blinker{
+                    //     0% { background-color: $orange-color; }
+                    //     50% { background-color: transparent; }
+                    //     100% { background-color: $orange-color; }
+                    // }
                 }
             }
               
@@ -311,6 +311,39 @@ header{
                 max-width: 100%;
                 height: auto;
                 object-fit: cover;
+            }
+        }
+    }
+
+    @include mobile-view{
+        .hero-section{
+            margin: 0 0 3rem 1.5rem;
+            justify-content: center;
+            flex-direction: column-reverse;
+
+            .hero-text{
+                flex: 1 0 100%;
+                margin-right: 1.5rem;
+
+                .wrapper{
+                    .effect-wrapper{
+                        font: 900 2.4rem / 3rem $font-family;
+                    }
+                }
+
+                p{
+                    width: 100%;
+                    margin-bottom: 2.5rem;
+                }
+            }
+
+            .hero-image{
+                flex: 1 0 100%;
+                margin-right: .5rem;
+
+                img{
+                    margin: 0 auto 2rem -.6rem;
+                }
             }
         }
     }
