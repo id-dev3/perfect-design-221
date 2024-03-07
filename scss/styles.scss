@@ -833,6 +833,24 @@ main{
         }
     }
 
+    @include mobile-view{
+        .third-section{
+            padding: 0 1.5rem;
+
+            .header-2{
+                h2{
+                    font-size: 2rem;
+                }
+
+                p{
+                    img{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
     // FOURTH SECTION
     .fourth-section{
         padding: 0 4rem;
