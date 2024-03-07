@@ -388,6 +388,26 @@ main{
         }
     }
 
+    @include mobile-view{
+        .brand-logo-container{
+            margin: 5rem 0;
+
+            p{
+                font: 600 1.25rem / 1.5 $font-family;
+                margin-bottom: .8rem;
+            }
+
+            .brand-logos{
+                gap: 10px;
+
+                .brand-logo{
+                    max-width: 5.125rem;
+                    max-height: 5.125rem;
+                }
+            }
+        }
+    }
+
     // FIRST SECTION
     .first-section{
         margin: 0 4rem 7rem 4rem;
