@@ -430,7 +430,7 @@ main{
             justify-content: center;
             flex-wrap: wrap;
             gap: 1.5rem;
-            margin: 3.5rem auto 0rem auto;
+            margin: 3.5rem auto 0 auto;
 
             .box{
                 max-width: 20rem;
@@ -516,11 +516,39 @@ main{
         
             @media (max-width: 1000px){
                 flex-direction: column;
+                justify-content: center;
                 align-items: center;
                 padding: 3.75rem 1.875rem;
         
                 .box{
                     margin-bottom: 1.25rem;
+                }
+            }
+        }
+    }
+
+    @include mobile-view{
+        .first-section{
+            margin: 0 1.5rem 7rem 1.5rem;
+
+            .header-0{
+                h2{
+                   font-size: 2rem;
+                }
+    
+                p{
+                    img{
+                        display: none;
+                    }
+                }
+            }
+
+            .first-container{
+                margin: 0 auto 0 auto;
+                padding: 3.75rem 0;
+
+                .box{
+                    max-width: 100%;
                 }
             }
         }
