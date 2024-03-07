@@ -19,6 +19,10 @@ header{
             }
         }
 
+        .hamburger{
+            display: none;
+        }
+
         .nav-links{
             .links{
                 font: 600 1.15rem / 1.5 $font-family;
@@ -89,6 +93,28 @@ header{
                     font: 900 .950rem / 1.5 "Roboto", sans-serif;
                     color: $black-color;
                 }
+            }
+        }
+    }
+
+    @include mobile-view{
+        .navbar-container{
+            padding: 1.5rem 1rem;
+
+            .nav-logo{
+                a{
+                    img{
+                        width: 3.6rem;
+                    }
+                }
+            }
+
+            // .nav-links{
+            //     display: none;
+            // }
+
+            .nav-btn{
+                display: none;
             }
         }
     }
