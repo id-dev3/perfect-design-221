@@ -1463,3 +1463,28 @@ footer{
         }
     }
 }
+
+@include mobile-view{
+    footer{
+        padding: 1.5rem 1rem;
+        justify-content: center;
+        flex-direction: column;
+        gap: 16px 0;
+
+        .footer-icons{
+            .icon{
+                margin-right: 1.5rem;
+                
+                .fa-brands{
+                    font-size: 1.75rem;
+                }
+            }
+        }
+
+        .copyright{
+            p{
+                font-size: 1.050rem;
+            }
+        }
+    }
+}
