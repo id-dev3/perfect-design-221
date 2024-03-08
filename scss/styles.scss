@@ -65,6 +65,14 @@ header{
             .links-1{
                 margin-right: 0;
             }
+
+            hr{
+                display: none;
+            }
+
+            .nav-btn-1{
+                display: none
+            }
         }
 
         .nav-btn{
@@ -152,7 +160,7 @@ header{
             .nav-links{
                 display: none;
                 position: fixed;
-                top: 35%;
+                top: 42%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 background-color: white;
@@ -183,17 +191,30 @@ header{
                 }
 
                 .links{
-                    font-size: 1.125rem;
-                    font-weight: 400;
+                    font-size: 1.25rem;
                     color: $black-color;
-                    letter-spacing: -0.00863rem;
-                    margin-bottom: 1.7rem;
-                    padding: 0;
+                    margin: 0 0 1.7rem 0;
+                }
+
+                .about{
+                    &:hover::after{
+                        width: calc(45% - .36rem);
+                    }
                 }
           
                 a{
                   display: block;
                   text-align: center;
+                }
+
+                hr{
+                    color: $color-white;
+                    display: block;
+                    margin: 3rem 0 2rem 0;
+                }
+
+                .nav-btn-1{
+                    @include nav-btn-1;
                 }
             }
 
@@ -1129,7 +1150,7 @@ main{
                         }
 
                         .name{
-                            padding: .5rem 1rem;
+                            padding: .5rem .7rem;
                             bottom: -70px;
                             font: 600 1rem / 1.25rem $font-family;
 
@@ -1474,7 +1495,7 @@ footer{
         .footer-icons{
             .icon{
                 margin-right: 1.5rem;
-                
+
                 .fa-brands{
                     font-size: 1.75rem;
                 }

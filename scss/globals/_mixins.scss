@@ -63,6 +63,35 @@
     }
 }
 
+@mixin nav-btn-1{
+    @include flex-setup-1;
+
+    .icon-1{
+        @include flex-setup-1;
+        background: $orange-color;
+        border-radius: 50%;
+        padding: .9rem;
+        margin-right: .5rem;
+
+        img{
+            width: 1.75rem;
+        }
+    }
+
+    .hotline-1{
+        .dispo-1{
+            font: 700 .9rem / 1.5 "Roboto", sans-serif;
+            color: $light-black-color;
+            margin-bottom: .15rem;
+        }
+
+        .number-1{
+            font: 900 1.15rem / 1.5 "Roboto", sans-serif;
+            color: $black-color;
+        }
+    }
+}
+
 @mixin mobile-view{
     @media only screen and (max-width: 600px){
       @content;
