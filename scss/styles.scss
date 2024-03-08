@@ -1160,7 +1160,13 @@ main{
         }
     }
 
-    .container{
+    @include mobile-view{
+        .text-container{
+            padding: 2rem 1.5rem 0 1.5rem;
+        }
+    }
+
+    .form-container{
         position: relative;
         width: 100%;
         padding: 3rem 4rem;
@@ -1231,6 +1237,10 @@ main{
                         position: relative;
                         margin: 1rem 0;
 
+                        ::placeholder{
+                            color: whitesmoke;
+                        }
+
                         .input{
                             width: 100%;
                             outline: none;
@@ -1279,9 +1289,6 @@ main{
         }
 
         .contact-info{
-            // background: url(../images/contact-us.jpg);
-            // background-position: bottom top;
-            // background-size: cover;
             padding: 2.3rem 2.2rem;
             position: relative;
 
@@ -1291,7 +1298,8 @@ main{
             }
 
             .text{
-                color: $black-color;
+                color: $light-black-color;
+                font-weight: 500;
                 margin: 1.5rem 0 2rem 0;
             }
 
@@ -1326,7 +1334,7 @@ main{
                     a{
                         width: 2.188rem;
                         height: 2.188rem;
-                        border-radius: 5px;
+                        border-radius: .313rem;
                         background: linear-gradient(45deg, $orange-color, #fdccb3);
                         color: $color-white;
                         text-align: center;
@@ -1347,18 +1355,18 @@ main{
                 grid-template-columns: 1fr;
             }
 
-            .contact-info:before{
-                bottom: initial;
-                top: -75px;
-                right: 65px;
-                transform: scale(0.95);
-            }
+            // .contact-info:before{
+            //     bottom: initial;
+            //     top: -75px;
+            //     right: 65px;
+            //     transform: scale(0.95);
+            // }
 
-            .contact-form:before{
-                top: -13px;
-                left: initial;
-                right: 70px;
-            }
+            // .contact-form:before{
+            //     top: -13px;
+            //     left: initial;
+            //     right: 70px;
+            // }
 
             .text{
                 margin: 1rem 0 1.5rem 0;
@@ -1370,13 +1378,13 @@ main{
         }
 
         @media (max-width: 480px){
-            .container{
+            .form-container{
                 padding: 1.5rem;
             }
 
-            .contact-info:before{
-                display: none;
-            }
+            // .contact-info:before{
+            //     display: none;
+            // }
 
             form,
             .contact-info{
@@ -1386,21 +1394,22 @@ main{
             .text,
             .information,
             .social-media p{
-                font-size: 0.8rem;
+                font-size: 1rem;
+                font-weight: 500;
             }
 
             .title{
-                font-size: 1.15rem;
+                font-size: 1.25rem;
             }
 
             .social-icons a{
-                width: 30px;
-                height: 30px;
-                line-height: 30px;
+                width: 1.875rem;
+                height: 1.875rem;
+                line-height: 1.875rem;
             }
 
             .icon{
-                width: 23px;
+                width: 1.438rem;
             }
 
             .input{
@@ -1410,6 +1419,12 @@ main{
             .btn{
                 padding: 0.45rem 1.2rem;
             }
+        }
+    }
+
+    @include mobile-view{
+        .form-container{
+            padding: 3rem 1.5rem;
         }
     }
 }
