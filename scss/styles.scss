@@ -1020,7 +1020,7 @@ main{
         .fifth-container{
             margin: 3rem auto 0 auto;
 
-            .container{
+            .container-0{
                 display: flex;
                 justify-content: center;
                 width: 90%;
@@ -1099,6 +1099,43 @@ main{
                             top: 0;
                             left: 50%;
                             transform: translate(-50%, -50%) rotate(45deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include mobile-view{
+        .fifth-section{
+            padding: 0 0;
+
+            .header-4{
+                padding: 0 1.5rem;
+                h2{
+                    font-size: 2rem;
+                }
+            }
+
+            .fifth-container{
+                padding: 0 1.5rem;
+
+                .container-0{
+                    width: 100%;
+
+                    .profile{
+                        img{
+                            width: 100%;
+                        }
+
+                        .name{
+                            padding: .5rem 1rem;
+                            bottom: -70px;
+                            font: 600 1rem / 1.25rem $font-family;
+
+                            p{
+                                font: 500 .8rem / 1rem $font-family;
+                            }
                         }
                     }
                 }
