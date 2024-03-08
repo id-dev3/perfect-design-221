@@ -914,7 +914,7 @@ main{
                     opacity: 0.5;
                 }
 
-                div{
+                .social-media-icons{
                     @include flex-setup-0;
 
                     a{
@@ -939,11 +939,12 @@ main{
           
         @media (width <= 600px){
             .fourth-container{
-                margin: 0 2.5rem;
-                padding: 0 3.125rem 3.75rem 3.125rem;
+                margin: 0 0;
+                padding: 0 1.5rem 2.75rem 1.5rem;
                 width: 100%;
                 text-align: center;
                 flex-direction: column;
+                margin-top: 8.25rem;
 
                 img{
                     margin: -6.25rem 0 1.875rem 0;
@@ -971,7 +972,29 @@ main{
                     height: 45vw;
                     width: 45vw;
                     border-radius: 50%;
-                    margin: -8.75rem 0 1.875rem 0;
+                    margin: -5.75rem 0 1.875rem 0;
+                }
+
+                .social-media-icons{
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+    @include mobile-view{
+        .fourth-section{
+            padding: 0 1.5rem;
+
+            .header-3{
+                h2{
+                    font-size: 2rem;
+                }
+            }
+
+            .fourth-container{
+                .social-media-icons{
+                    justify-content: center;
                 }
             }
         }
