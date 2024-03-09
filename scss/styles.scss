@@ -362,6 +362,14 @@ main{
         }
     }
 
+    @include tablet-view{
+        .brand-logo-container{
+            p{
+                font-size: 1.4rem;
+            }
+        }
+    }
+
     // FIRST SECTION
     .first-section{
         margin: 0 4rem 7rem 4rem;
@@ -465,7 +473,7 @@ main{
             }
         
             @media (max-width: 1000px){
-                flex-direction: column;
+                // flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 padding: 3.75rem 1.875rem;
@@ -499,6 +507,33 @@ main{
 
                 .box{
                     max-width: 100%;
+                }
+            }
+        }
+    }
+
+    @include tablet-view{
+        .first-section{
+            margin: 0 2rem 3rem 2rem;
+
+            .header-0{
+                h2{
+                   font-size: 2rem;
+                }
+    
+                p{
+                    img{
+                        display: none;
+                    }
+                }
+            }
+
+            .first-container{
+                margin: 0 auto 0 auto;
+                padding: 3.75rem 0;
+
+                .box{
+                    min-height: 20rem;
                 }
             }
         }
@@ -632,6 +667,30 @@ main{
                         padding: 0 0 1.8rem 0;
                     }
                 }
+            }
+        }
+    }
+
+    @include tablet-view{
+        .second-section{
+            padding: 0 2rem;
+
+            .header-1{
+                h2{
+                    font-size: 2rem;
+                }
+
+                p{
+                    margin-bottom: 4rem;
+
+                    img{
+                        display: none;
+                    }
+                }
+            }
+
+            .second-container{
+                padding: 0;
             }
         }
     }
