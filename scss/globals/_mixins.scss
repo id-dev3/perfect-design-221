@@ -92,6 +92,125 @@
     }
 }
 
+@mixin common-styles{
+    .navbar-container{
+        padding: 2rem 1.5rem;
+
+        .nav-logo{
+            a{
+                img{
+                    width: 3.6rem;
+                }
+            }
+        }
+
+        .hamburger{
+            display: block;
+            cursor: pointer;
+
+            input{
+                display: none;
+
+                &:checked{
+                    +{
+                        svg{
+                            transform: rotate(-45deg);
+
+                            .line-top-bottom{
+                                stroke-dasharray: 20 300;
+                                stroke-dashoffset: -32.42;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            svg{
+                height: 3rem;
+                transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .line{
+                fill: none;
+                stroke: $black-color;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 3;
+                transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .line-top-bottom{
+                stroke-dasharray: 12 63;
+            }
+        }
+
+        .nav-links{
+            display: none;
+            position: fixed;
+            top: 42%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border-radius: .5rem;
+            padding: 2rem;
+            box-shadow: 0 200px 200px 25px rgba(0, 0, 0, 0.6);
+            max-height: 70vh;
+            width: 80%;
+            overflow-y: auto;
+            z-index: 50;
+            opacity: 0;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+
+            &.show{
+                animation: fadeInUp 1s forwards;
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            @keyframes fadeInUp{
+                from {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.8) translateY(30px);
+                }
+                to {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+                }
+            }
+
+            .links{
+                font-size: 1.25rem;
+                color: $black-color;
+                margin: 0 0 1.7rem 0;
+            }
+
+            .about{
+                &:hover::after{
+                    width: calc(30% - .36rem);
+                }
+            }
+      
+            a{
+              display: block;
+              text-align: center;
+            }
+
+            hr{
+                color: $color-white;
+                display: block;
+                margin: 3rem 0 2rem 0;
+            }
+
+            .nav-btn-1{
+                @include nav-btn-1;
+            }
+        }
+
+        .nav-btn{
+            display: none;
+        }
+    }
+}
+
 @mixin mobile-view{
     @media only screen and (max-width: 600px){
       @content;
