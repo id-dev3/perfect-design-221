@@ -137,3 +137,21 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /// End Hamburger Menu ///
+
+
+/// Fixing hover effect on mobile view (.second-section) ///
+
+function toggleHoverEffectOutside(event) {
+    const boxes = document.querySelectorAll('.card');
+    const isClickedOutside = !event.target.closest('.card');
+
+    if (isClickedOutside) {
+        boxes.forEach(box => {
+            box.classList.remove('hovered');
+        });
+    }
+}
+
+document.body.addEventListener('click', toggleHoverEffectOutside);
+
+/// End Fixing hover effect on mobile view (.second-section) ///
