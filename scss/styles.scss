@@ -844,15 +844,17 @@ main{
             padding: 0 1.5rem;
 
             .header-2{
-                h2{
-                    font-size: 2rem;
-                }
+                @include header-setup-1;
+            }
+        }
+    }
 
-                p{
-                    img{
-                        display: none;
-                    }
-                }
+    @include tablet-view{
+        .third-section{
+            padding: 0 3rem;
+
+            .header-2{
+                @include header-setup-1;
             }
         }
     }
@@ -1006,6 +1008,18 @@ main{
         }
     }
 
+    @include tablet-view{
+        .fourth-section{
+            padding: 0 2rem;
+
+            .header-3{
+                h2{
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
     // FIFTH SECTION
     .fifth-section{
         // margin: 0 5rem;
@@ -1149,6 +1163,12 @@ main{
         }
     }
 
+    @include tablet-view{
+        .fifth-section{
+            padding: 0 2rem;
+        }
+    }
+
     .text-container{
         text-align: center;
         padding: 3rem 4rem 0 4rem;
@@ -1169,6 +1189,16 @@ main{
     @include mobile-view{
         .text-container{
             padding: 2rem 1.5rem 0 1.5rem;
+        }
+    }
+
+    @include tablet-view{
+        .text-container{
+            padding: 2rem 2rem 0 2rem;
+
+            p{
+                font-size: 1.25rem;
+            }
         }
     }
 
@@ -1416,6 +1446,32 @@ main{
             padding: 3rem 1.5rem;
         }
     }
+
+    @include tablet-view{
+        .form-container{
+            padding: 3rem 2.7rem;
+
+            .contact-info{
+                .title{
+                    font-size: 1.8rem;
+                }
+
+                .text{
+                    font-size: 1.15rem;
+                }
+
+                .information{
+                    font-size: 1.15rem;
+                }
+
+                .social-media{
+                    p{
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
 }
 
 footer{
@@ -1475,5 +1531,11 @@ footer{
                 font-size: 1.050rem;
             }
         }
+    }
+}
+
+@include tablet-view{
+    footer{
+        padding: 1.5rem 3rem;
     }
 }

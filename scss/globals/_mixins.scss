@@ -63,6 +63,18 @@
     }
 }
 
+@mixin header-setup-1{
+    h2{
+        font-size: 2rem;
+    }
+
+    p{
+        img{
+            display: none;
+        }
+    }
+}
+
 @mixin nav-btn-1{
     @include flex-setup-1;
 
