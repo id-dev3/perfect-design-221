@@ -956,6 +956,20 @@ main{
         }
     }
 
+    @include laptop-view{
+        .third-section{
+            padding: 0 4rem;
+
+            .header-2{
+                @include header-setup-1;
+            }
+
+            .third-container{
+                margin-bottom: 6rem;
+            }
+        }
+    }
+
     // FOURTH SECTION
     .fourth-section{
         padding: 0 4rem;
