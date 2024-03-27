@@ -139,6 +139,28 @@ header{
         }
     }
     /// END MEDIA QUERY TABLET VIEW ///
+    
+    @include laptop-view{
+        @include common-styles;
+
+        .navbar-container{
+            padding: 2rem;
+
+            .nav-logo{
+                a{
+                    img{
+                        width: 5rem;
+                    }
+                }
+            }
+
+            .hamburger{
+                svg{
+                    height: 4rem;
+                }
+            }
+        }
+    }
 
     .hero-section{
         @include flex-setup-0;
@@ -301,6 +323,39 @@ header{
             }
         }
     }
+
+    @include laptop-view{
+        .hero-section{
+            margin: 1.5rem 0 2rem 2rem;
+            justify-content: center;
+            flex-direction: column-reverse;
+
+            .hero-text{
+                flex: 1 0 100%;
+                margin-right: 0;
+
+                .wrapper{
+                    .effect-wrapper{
+                        font: 900 3.7rem / 4rem $font-family;
+                    }
+                }
+
+                p{
+                    font-size: 1.25rem;
+                    width: 100%;
+                    margin-bottom: 2.5rem;
+                }
+            }
+
+            .hero-image{
+                flex: 1 0 100%;
+
+                img{
+                    margin: 0 auto 3rem -1.3rem;
+                }
+            }
+        }
+    }
 }
 
 /// HEADER SECTION ///
@@ -363,6 +418,14 @@ main{
     }
 
     @include tablet-view{
+        .brand-logo-container{
+            p{
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    @include laptop-view{
         .brand-logo-container{
             p{
                 font-size: 1.4rem;
@@ -536,6 +599,12 @@ main{
                     min-height: 20rem;
                 }
             }
+        }
+    }
+
+    @include laptop-view{
+        .first-section{
+            margin: 0 2rem 3rem 2rem;
         }
     }
 
