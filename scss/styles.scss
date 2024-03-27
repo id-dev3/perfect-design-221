@@ -777,6 +777,21 @@ main{
         }
     }
 
+    @include laptop-view{
+        .second-section{
+            padding: 0 2rem;
+
+            .header-1{
+                @include header-setup-1;
+            }
+
+            .second-container{
+                padding: 0 1rem;
+                margin-top: 3.7rem;
+            }
+        }
+    }
+
     // THIRD SECTION
     .third-section{
         padding: 0 4rem;
