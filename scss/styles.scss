@@ -1292,6 +1292,16 @@ main{
         }
     }
 
+    @include laptop-view{
+        .fifth-section{
+            padding: 0 2rem;
+
+            .header-4{
+                @include header-setup-1;
+            }
+        }
+    }
+
     .text-container{
         text-align: center;
         padding: 3rem 4rem 0 4rem;
@@ -1325,6 +1335,16 @@ main{
         }
     }
 
+    @include laptop-view{
+        .text-container{
+            padding: 2rem 2rem 0 2rem;
+
+            p{
+                font-size: 1.40rem;
+            }
+        }
+    }
+
     .form-container{
         position: relative;
         width: 100%;
@@ -1338,7 +1358,7 @@ main{
             background-color: $color-white;
             border-radius: .625rem;
             box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
+            // z-index: 1000;
             overflow: hidden;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -1590,6 +1610,30 @@ main{
                 .social-media{
                     p{
                         font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @include laptop-view{
+        .form-container{
+            .contact-info{
+                .title{
+                    font-size: 1.90rem;
+                }
+
+                .text{
+                    font-size: 1.25rem;
+                }
+
+                .information{
+                    font-size: 1.25rem;
+                }
+
+                .social-media{
+                    p{
+                        font-size: 1.5rem;
                     }
                 }
             }
