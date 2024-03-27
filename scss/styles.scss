@@ -605,6 +605,19 @@ main{
     @include laptop-view{
         .first-section{
             margin: 0 2rem 3rem 2rem;
+
+            .header-0{
+                @include header-setup-1;
+            }
+
+            .first-container{
+                margin: 0 auto 0 auto;
+                padding: 3.75rem 0;
+
+                .box{
+                    min-height: 20rem;
+                }
+            }
         }
     }
 
