@@ -105,13 +105,11 @@ header{
         }
     }
 
-    /// START MEDIA QUERY MOBILE VIEW ///
+    /// START MEDIA QUERY ///
     @include mobile-view{
         @include common-styles;
     }
-    /// END MEDIA QUERY MOBILE VIEW ///
 
-    /// START MEDIA QUERY TABLET VIEW ///
     @include tablet-view{
         @include common-styles;
 
@@ -138,7 +136,6 @@ header{
             }
         }
     }
-    /// END MEDIA QUERY TABLET VIEW ///
     
     @include laptop-view{
         @include common-styles;
@@ -161,6 +158,13 @@ header{
             }
         }
     }
+
+    @include desktop-view{
+        .navbar-container{
+            padding: 2.5rem 2rem;
+        }
+    }
+    /// END MEDIA QUERY ///
 
     .hero-section{
         @include flex-setup-0;
@@ -258,6 +262,7 @@ header{
         }
     }
 
+    /// START MEDIA QUERY ///
     @include mobile-view{
         .hero-section{
             margin: 0 0 3rem 1.5rem;
@@ -356,6 +361,26 @@ header{
             }
         }
     }
+
+    @include desktop-view{
+        .hero-section{
+            margin: 1.5rem 0 2rem 2rem;
+
+            .hero-text{
+                .wrapper{
+                    .effect-wrapper{
+                        font: 900 3.5rem / 4rem $font-family;
+                    }
+                }
+
+                p{
+                    width: 100%;
+                    text-wrap: pretty;
+                }
+            }
+        }
+    }
+    /// END MEDIA QUERY ///
 }
 
 /// HEADER SECTION ///
@@ -792,6 +817,16 @@ main{
         }
     }
 
+    @include desktop-view{
+        .second-section{
+            padding: 0 2rem;
+
+            .second-container{
+                padding: 0;
+            }
+        }
+    }
+
     // THIRD SECTION
     .third-section{
         padding: 0 4rem;
@@ -970,6 +1005,12 @@ main{
         }
     }
 
+    @include desktop-view{
+        .third-section{
+            padding: 0 3.15rem;
+        }
+    }
+
     // FOURTH SECTION
     .fourth-section{
         padding: 0 4rem;
@@ -1140,6 +1181,12 @@ main{
                     font-size: 2rem;
                 }
             }
+        }
+    }
+
+    @include desktop-view{
+        .fourth-section{
+            padding: 0 2rem;
         }
     }
 
